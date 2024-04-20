@@ -1,0 +1,77 @@
+
+
+*{
+    font-family: "Mulish", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+
+
+.logo {
+    width: 50px; /* Ajusta el ancho según el tamaño de tu logo */
+    height: 50px; /* Ajusta la altura según el tamaño de tu logo */
+    display: inline-block;
+    background-image: url('./assets/logo.png'); /* Reemplaza 'ruta_de_tu_logo.png' con la ruta real de tu imagen */
+    background-size: contain; /* Ajusta el tamaño de la imagen para que quepa dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+
+.acercaDeMi {
+    text-align: center; /* Centrar el contenido horizontalmente */
+    color: white; /* Hacer que el texto sea blanco */
+    background: rgb(191,69,251);
+    background: linear-gradient(81deg, rgba(191,69,251,1) 71%, rgba(0,0,0,0) 100%);
+    padding: 20px; /* Agregar espacio alrededor del contenido */
+}
+
+.acercaDeMi h1 {
+    font-weight: bold; /* Hacer el título en negrita */
+}
+
+.hola{
+    padding: 120px;;
+    size:80px;
+}
+
+
+
+.boton-descargar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+
+.carousel-item img {
+    height: 550px; /* Altura deseada para las imágenes */
+}
+
+
+#habilidades {
+    margin-top: 50px;
+}
+
+.habilidad {
+    margin-bottom: 20px;
+}
+
+.habilidad h3 {
+    color: #333;
+}
+
+.habilidad ul {
+    list-style: none;
+    padding: 0;
+}
+
+.habilidad ul li {
+    margin-bottom: 5px;
+    color: #666;
+}
+
