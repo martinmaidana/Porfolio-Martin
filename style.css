@@ -75,3 +75,32 @@ font-style: normal;
     color: #666;
 }
 
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo {
+    margin-bottom: 20px;
+}
+
+.habilidad {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Estilos para los iconos */
+.fab {
+    margin-right: 5px;
+}
