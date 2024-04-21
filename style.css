@@ -23,8 +23,8 @@ font-style: normal;
 .acercaDeMi {
     text-align: center; /* Centrar el contenido horizontalmente */
     color: white; /* Hacer que el texto sea blanco */
-    background: rgb(191,69,251);
-    background: linear-gradient(81deg, rgba(191,69,251,1) 71%, rgba(0,0,0,0) 100%);
+    background:#dae8ff;
+    background: linear-gradient(to right, #94b5ff, #2732ff);
     padding: 20px; /* Agregar espacio alrededor del contenido */
 }
 
@@ -35,6 +35,24 @@ font-style: normal;
 .hola{
     padding: 120px;;
     font-size: 6em;
+    color:#1e2791;
+   /* Hacer el título en negrita */
+}
+
+.hola i {
+    color: #bcd3ff;}
+
+
+.parrafo-hola{
+    color: #1a23b9;
+    text-align: center; /* Centra el párrafo */
+    font-size: calc(16px + 4px); /* Aumenta el tamaño del texto en 4px */
+    font-weight: bold; 
+    
+        padding: 20px; /* Agrega un padding de 20px alrededor del párrafo */
+        line-height: 1.5; /* Establece la altura de línea para mejorar la legibilidad */
+    
+    
 }
 
 
