@@ -37,3 +37,9 @@ body {
         font-size: 48px;
     }
 }
+
+.contenedor-habilidades ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
