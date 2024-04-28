@@ -1,117 +1,218 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
 
-
-*{
-    font-family: "Mulish", sans-serif;
-font-optical-sizing: auto;
-font-weight: 400;
-font-style: normal;
+  font-style: normal;
+  background-color: rgb(14, 15, 30);
+  color: white;
 }
 
+.barra {
+  max-width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0;
+  padding-left: 112px;
+  padding-right: 112px;
+  display: flex;
+}
+
+.span-logo {
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 11ch;
+
+  animation: typing 2s steps(11), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 
 .logo {
-    width: 80px; /* Ajusta el ancho según el tamaño de tu logo */
-    height: 80px; /* Ajusta la altura según el tamaño de tu logo */
-    display: inline-block;
-    background-image: url('./assets/logo.png'); /* Reemplaza 'ruta_de_tu_logo.png' con la ruta real de tu imagen */
+  width: 80px; /* Ajusta el ancho según el tamaño de tu logo */
+  height: 80px; /* Ajusta la altura según el tamaño de tu logo */
+  display: inline-block;
+  background-image: url("./assets/logo.png"); /* Reemplaza 'ruta_de_tu_logo.png' con la ruta real de tu imagen */
 
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-size: cover;
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: cover;
 }
 
-
-
 .acercaDeMi {
-    text-align: center; /* Centrar el contenido horizontalmente */
-    color: white; /* Hacer que el texto sea blanco */
-    background:#dae8ff;
-    background: linear-gradient(to right, #94b5ff, #2732ff);
-    padding: 20px; /* Agregar espacio alrededor del contenido */
+  text-align: center; /* Centrar el contenido horizontalmente */
+  color: white;
 }
 
 .acercaDeMi h1 {
-    font-weight: bold; /* Hacer el título en negrita */
+  font-weight: bold; /* Hacer el título en negrita */
 }
 
-.hola{
-    padding: 120px;;
-    font-size: 6em;
-    color:#1e2791;
-   /* Hacer el título en negrita */
+.hola {
+  padding-top: 120px;
+  font-size: 6em;
+  color: white;
+  /* Hacer el título en negrita */
 }
 
 .hola i {
-    color: #bcd3ff;}
-
-
-.parrafo-hola{
-    color: #1a23b9;
-    text-align: center; /* Centra el párrafo */
-    font-size: calc(16px + 4px); /* Aumenta el tamaño del texto en 4px */
-    font-weight: bold; 
-    
-        padding: 20px; /* Agrega un padding de 20px alrededor del párrafo */
-        line-height: 1.5; /* Establece la altura de línea para mejorar la legibilidad */
-    
-    
+  color: #bcd3ff;
 }
 
-
-
-.boton-descargar {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+.parrafo-hola {
+  color: white;
+  text-align: center; /* Centra el párrafo */
+  font-size: calc(16px + 4px); /* Aumenta el tamaño del texto en 4px */
+  font-weight: bold;
+  padding: 20px; /* Agrega un padding de 20px alrededor del párrafo */
+  line-height: 1.5; /* Establece la altura de línea para mejorar la legibilidad */
+  font-family: "Wellfleet", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
+.navbar-brand {
+  font-family: "Wellfleet", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.botones {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 35px;
+}
+
+.nav-item,
+.navbar-brand {
+  list-style: none;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+}
+
+.boton {
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #fe00ae, #8e39c5) 1; /* Borde transparente para permitir el gradiente en el borde */
+  background-image: transparent; /* Gradiente como fondo */
+  background-clip: padding-box; /* Se aplica el fondo solo al área del contenido */
+  background-origin: border-box; /* El fondo cubre también el borde */
+  color: #ffffff; /* Color del texto */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px;
+}
+
+/* Estilo para cuando pasas el ratón por encima del botón */
+.boton:hover {
+  background-image: linear-gradient(
+    90deg,
+    #fe00ae,
+    #8e39c5
+  ); /* Gradiente como fondo al pasar el ratón */
+  color: white; /* Cambia el color del texto al pasar el ratón */
+}
+
+.navbar-nav .nav-item .nav-link {
+  position: relative; /* Permite posicionar el guion debajo */
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+  content: ""; /* Crea el guion */
+  position: absolute; /* Lo posiciona debajo del texto */
+  left: 0; /* Lo alinea con el texto */
+  bottom: -2px; /* Lo coloca debajo del texto */
+  width: 100%; /* Ancho igual al texto */
+  height: 2px; /* Altura del guion */
+  background-color: #ff5733; /* Color del guion */
+}
+
+.navbar-brand:hover {
+  color: #ff5733; /* Cambia el color del texto al pasar el mouse a naranja */
+  font-weight: bold;
+}
 
 .carousel-item img {
-    height: 550px; /* Altura deseada para las imágenes */
+  height: 550px; /* Altura deseada para las imágenes */
 }
 
 .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .titulo {
-    margin-bottom: 20px;
-    padding: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
 .contenedor-habilidades {
-    display: flex;
-    justify-content: space-between; /* Para separar los divs */
-    width: 80%; /* Ajusta según sea necesario */
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  flex-direction: column;
+}
+.contenedor {
+  /* background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); */
 }
 
 .habilidades {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .habilidades ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0; /* Para evitar márgenes predeterminados de la lista */
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Para evitar márgenes predeterminados de la lista */
 }
 
 .habilidades li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
-
-
 
 .bg-success.bg-gradient {
-    text-align: center; /* Centra el contenido horizontalmente */
-    padding-top: 20px;
+  text-align: center; /* Centra el contenido horizontalmente */
+  padding-top: 20px;
 }
 
+.formulario {
+  padding: 80px; /* Ajusta el relleno según sea necesario */
+}
 
+.contenedor-formulario {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 38px;
+  filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+}
+
+.parrafo-formulario p {
+  font-family: "Wellfleet", monospace;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 18px;
+}
