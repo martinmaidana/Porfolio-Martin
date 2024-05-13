@@ -78,7 +78,7 @@
   text-align: center; /* Centra el párrafo */
   font-size: calc(16px + 4px); /* Aumenta el tamaño del texto en 4px */
   font-weight: bold;
-  padding: 20px; /* Agrega un padding de 20px alrededor del párrafo */
+
   line-height: 1.5; /* Establece la altura de línea para mejorar la legibilidad */
   font-family: "Wellfleet", monospace;
   font-weight: 400;
@@ -89,6 +89,10 @@
   font-family: "Wellfleet", monospace;
   font-weight: 400;
   font-style: normal;
+}
+.boton-container{
+  display: flex;
+    align-items: center;
 }
 
 .botones {
@@ -150,6 +154,9 @@
 
 .tituloPresentacion{
   text-align: center;
+}
+.container-imagen-presentacion{
+  padding-top: 0px;
 }
 .contenedor {
   display: flex;
@@ -266,12 +273,18 @@
   .container-imagen-presentacion{
     display: none;
   }
+  .titulo{
+    text-align: center;
+  }
   .imagen-proyectos{
     border-radius: 29px;
     padding: 10px;
     width: -webkit-fill-available;
     height: 220px
   }
+ .contenedor {
+    padding: 30px 10px 30px 10px;
+}
 .botones-proyecto{
   display:flex;
   justify-content: space-evenly;
