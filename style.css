@@ -268,8 +268,30 @@
   width: auto;
   height: 250px;
 }
+/* Mobile: 320–480 pixels */
 
-@media screen and (max-width: 376px) {
+
+/* Tablet portrait: 481–768 pixels */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* Estilos para tablets en orientación retrato */
+}
+
+/* Tablet landscape: up to 1024 pixels */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Estilos para tablets en orientación paisaje */
+}
+
+/* Laptop and small screen: 769–1024 pixels */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Estilos para laptops y pantallas pequeñas */
+}
+
+/* Large screen and desktop: 1025–1200 pixels */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* Estilos para pantallas grandes y desktops */
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .container-imagen-presentacion{
     display: none;
   }
@@ -301,4 +323,6 @@
   .parrafo-formulario p{
     font-size: 14px;;
   }
+  /* Estilos para dispositivos móviles */
 }
+
