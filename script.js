@@ -291,5 +291,26 @@ tlbearAppear.to([bearFace, bearNose, bearEars, bearBrows], .5, {
 }, 6)
 
 var tlbearBlink = new TimelineMax({repeat:-1});
-tlbearBlink.to(bearEyes, .2, {opacity: 0}, 4)
-tlbearBlink.to(bearEyes, .2, {opacity: 1})
+tlbearBlink.to(bearEyes, .2, {opacity: 0}, 4);
+tlbearBlink.to(bearEyes, .2, {opacity: 1});
+
+// Obtener el botón
+// Obtener el botón, el icono y el texto
+const botonDescargar = document.getElementById('descargarPDF');
+const icono = document.getElementById('icono');
+const texto = document.getElementById('texto');
+
+// Verificar el tamaño de la pantalla y cambiar el texto del botón
+function cambiarTextoBoton() {
+    if (window.innerWidth <= 480) {
+        texto.textContent = "Mi CV";
+        icono.style.display = '';
+    }
+}
+
+// Llamar a la función cuando la ventana cambie de tamaño
+window.addEventListener('resize', cambiarTextoBoton);
+
+// Llamar a la función una vez para establecer el texto inicial
+cambiarTextoBoton();
+

@@ -3,7 +3,7 @@
   font-optical-sizing: auto;
 
   font-style: normal;
-  background-color: rgb(14, 15, 30);
+  background-color: #0e0f1e;
   color: white;
 }
 
@@ -12,9 +12,9 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 0;
-  margin-right: 0;
-  padding-top: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 0px;
   padding-left: 112px;
   padding-right: 112px;
   display: flex;
@@ -90,9 +90,9 @@
   font-weight: 400;
   font-style: normal;
 }
-.boton-container{
+.boton-container {
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 
 .botones {
@@ -152,11 +152,11 @@
   font-weight: bold;
 }
 
-.tituloPresentacion{
+.tituloPresentacion {
   text-align: center;
 }
-.container-imagen-presentacion{
-  padding-top: 0px;
+.container-imagen-presentacion {
+  padding-top: 10px;
 }
 .contenedor {
   display: flex;
@@ -168,8 +168,38 @@
 .titulo {
   margin-bottom: 20px;
   padding: 20px;
+  text-align: center;
+}
+.cards {
+ 
+
+}
+.cards_fila1{
+  display: flex;
+  justify-content: space-around ;
+
+ padding-bottom: 20px;
+ align-items: center;
+
+}
+.cards_fila2{
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+ padding-bottom: 20px;
+}
+.card-encabezado {
+  text-align: center; /* Esto centra el texto */
+  max-width: 100%; /* Esto asegura que el texto no sobresalga del ancho de la imagen */
 }
 
+.card-encabezado .card-title {
+  margin-top: 10px; /* Espacio superior para separar el título de la imagen */
+}
+
+.card-encabezado .card-text {
+  margin-bottom: 10px; /* Espacio inferior para separar el texto de los botones */
+}
 .contenedor-habilidades {
   display: flex;
   justify-content: space-between;
@@ -178,10 +208,6 @@
 }
 
 
-.contenedor {
-  /* background-color: #85FFBD;
-    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); */
-}
 
 .habilidades {
   display: flex;
@@ -225,29 +251,26 @@
   padding-top: 18px;
 }
 
-
 .container {
-	margin: 3em auto;
+  margin: 3em auto;
   display: inline-block;
-	position: relative;
-	width: 100%;
-  
+  position: relative;
+  width: 100%;
 }
 
 .container svg {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 17px;
 }
-.conoceme{
+.conoceme {
   display: flex;
 }
 
-.parrafo-presentacion{
-
+.parrafo-presentacion {
   color: white;
-  text-align:left; /* Centra el párrafo */
+  text-align: left; /* Centra el párrafo */
   font-size: calc(16px + 4px); /* Aumenta el tamaño del texto en 4px */
   font-weight: bold;
   padding: 20px; /* Agrega un padding de 20px alrededor del párrafo */
@@ -257,72 +280,88 @@
   font-style: normal;
 }
 
-.tituloPresentacion{
+.tituloPresentacion {
   padding-bottom: 60px;
 }
-.sandia{
+.sandia {
   text-align: center;
 }
 
-.imagen-proyectos{
+.imagen-proyectos {
   width: auto;
   height: 250px;
+  display: block;
+  margin: 0 auto; /* Esto centra la imagen horizontalmente */
 }
-/* Mobile: 320–480 pixels */
 
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* Estilos para pantallas grandes y desktops */
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Estilos para laptops y pantallas pequeñas */
+}
 
 /* Tablet portrait: 481–768 pixels */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   /* Estilos para tablets en orientación retrato */
 }
 
-/* Tablet landscape: up to 1024 pixels */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Estilos para tablets en orientación paisaje */
-}
-
-/* Laptop and small screen: 769–1024 pixels */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Estilos para laptops y pantallas pequeñas */
-}
-
-/* Large screen and desktop: 1025–1200 pixels */
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
-  /* Estilos para pantallas grandes y desktops */
-}
-
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .container-imagen-presentacion{
+  .barra {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .home {
+    display: flex;
+  }
+
+  .hola {
+    padding-top: 40px;
+  }
+  .container-imagen-presentacion {
     display: none;
   }
-  .titulo{
+  .titulo {
     text-align: center;
   }
-  .imagen-proyectos{
-    border-radius: 29px;
+  .cards {
+    flex-direction: column;
+  }
+  .imagen-proyectos {
+    border-top-left-radius: 17px; /* Radio de borde superior izquierdo */
+    border-top-right-radius: 17px; /* Radio de borde superior derecho */
     padding: 10px;
     width: -webkit-fill-available;
-    height: 220px
+    height: 220px;
   }
- .contenedor {
+  .contenedor {
     padding: 30px 10px 30px 10px;
-}
-.botones-proyecto{
-  display:flex;
-  justify-content: space-evenly;
-}
-  .habilidades{
+  }
+  .card-encabezado {
+    text-align: center;
+  }
+  .botones-proyecto {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .boton-proyecto {
+    padding: 4px 10px 4px 10px;
+    background-color: #1e0e17;
+    border-radius: 6px;
+  }
+  .habilidades {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
   }
 
-  .formulario{
-  padding: 10px;}
-  .parrafo-formulario p{
-    font-size: 14px;;
+  .formulario {
+    padding: 10px;
+  }
+  .parrafo-formulario p {
+    font-size: 14px;
   }
   /* Estilos para dispositivos móviles */
 }
-
