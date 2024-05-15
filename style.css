@@ -174,7 +174,7 @@
 }
 .card-encabezado {
   text-align: center; /* Esto centra el texto */
-  max-width: 550px; /* Esto asegura que el texto no sobresalga del ancho de la imagen */
+  max-width: 100%; /* Esto asegura que el texto no sobresalga del ancho de la imagen */
   padding-bottom: 10px;
 }
 .card-text + p {
@@ -297,6 +297,28 @@
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
+.bento-item {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(171, 150, 200, 0.8); /* Fondo blanco transparente */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.card-parrafos{
+  padding-top: 3px;
+  line-height: 0.5em;
+
+}
+
+/* Estilos específicos para la segunda tarjeta */
+
+
+
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   .conoceme {
     display: flex;
@@ -334,6 +356,7 @@
   .cards_fila1,
   .cards_fila2 {
     flex-direction: column;
+    align-items: center;
   }
   .card-encabezado {
     max-width: 100%;
@@ -444,5 +467,8 @@
   .parrafo-formulario p {
     font-size: 14px;
   }
-  /* Estilos para dispositivos móviles */
+  .card-parrafos {
+    padding-top: 3px;
+    line-height: 0.9em;
+  /* Estilos para dispositivos móviles */}
 }
