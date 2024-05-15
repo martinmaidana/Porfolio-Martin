@@ -6,18 +6,9 @@
   background-color: #0e0f1e;
   color: white;
 }
-
-.barra {
-  max-width: 100%;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-top: 0px;
-  padding-left: 112px;
-  padding-right: 112px;
+.barra_nav {
   display: flex;
+  justify-content: center;
 }
 
 .span-logo {
@@ -170,29 +161,25 @@
   padding: 20px;
   text-align: center;
 }
-.cards {
- 
 
-}
-.cards_fila1{
+.cards_fila1 {
   display: flex;
-  justify-content: space-around ;
-
- padding-bottom: 20px;
- align-items: center;
-
+  justify-content: space-around;
+  padding-bottom: 20px;
 }
-.cards_fila2{
+.cards_fila2 {
   display: flex;
-  justify-content: space-around ;
-  align-items: center;
- padding-bottom: 20px;
+  justify-content: space-around;
+  padding-bottom: 20px;
 }
 .card-encabezado {
   text-align: center; /* Esto centra el texto */
-  max-width: 100%; /* Esto asegura que el texto no sobresalga del ancho de la imagen */
+  max-width: 550px; /* Esto asegura que el texto no sobresalga del ancho de la imagen */
+  padding-bottom: 10px;
 }
-
+.card-text + p {
+  margin-top: 0.1em; /* Puedes ajustar el valor según tus necesidades */
+}
 .card-encabezado .card-title {
   margin-top: 10px; /* Espacio superior para separar el título de la imagen */
 }
@@ -200,14 +187,22 @@
 .card-encabezado .card-text {
   margin-bottom: 10px; /* Espacio inferior para separar el texto de los botones */
 }
+
+.boton-proyecto {
+  margin-right: 20px; /* Separación entre botones */
+  border: 2px solid white; /* Borde blanco */
+  border-radius: 7px;
+  padding: 10px; /* Añade un poco de espacio interior al botón */
+}
+
+/* Opcional: Ajusta el tamaño del icono si es necesario */
+
 .contenedor-habilidades {
   display: flex;
   justify-content: space-between;
   width: 80%;
   flex-direction: column;
 }
-
-
 
 .habilidades {
   display: flex;
@@ -291,19 +286,99 @@
   width: auto;
   height: 250px;
   display: block;
+  border-radius: 7px;
+
   margin: 0 auto; /* Esto centra la imagen horizontalmente */
+  transition: transform 0.5s ease; /* Transición suave */
+}
+
+.imagen-proyectos:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al 110% */
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .conoceme {
+    display: flex;
+    flex-direction: column;
+  }
+  .imagen-svg {
+    width: 950px;
+  }
+  .imagen-proyectos {
+    width: 460px;
+  }
+  .card-encabezado {
+    max-width: 460px;
+  }
   /* Estilos para pantallas grandes y desktops */
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container-imagen-presentacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+  }
+
+  .conoceme {
+    display: flex;
+    flex-direction: column;
+  }
+  .imagen-svg {
+    width: 750px;
+  }
+  .titulo {
+    padding-top: 90px;
+  }
+  .cards_fila1,
+  .cards_fila2 {
+    flex-direction: column;
+  }
+  .card-encabezado {
+    max-width: 100%;
+  }
+  .habilidades-programas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .contenedor-formulario {
+    padding: 0px;
+  }
   /* Estilos para laptops y pantallas pequeñas */
 }
 
 /* Tablet portrait: 481–768 pixels */
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  /* Estilos para tablets en orientación retrato */
+  .conoceme {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-imagen-presentacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+  }
+  .card-encabezado {
+    max-width: 100%;
+  }
+  .imagen-svg {
+    width: 460px;
+  }
+  .cards_fila1,
+  .cards_fila2 {
+    flex-direction: column;
+  }
+  .imagen-proyectos {
+    width: 470px;
+  }
+  .habilidades-programas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -333,13 +408,19 @@
     border-top-right-radius: 17px; /* Radio de borde superior derecho */
     padding: 10px;
     width: -webkit-fill-available;
-    height: 220px;
+    height: 200px;
+  }
+
+  .cards_fila1,
+  .cards_fila2 {
+    flex-direction: column;
   }
   .contenedor {
     padding: 30px 10px 30px 10px;
   }
   .card-encabezado {
     text-align: center;
+    max-width: 100%;
   }
   .botones-proyecto {
     display: flex;
