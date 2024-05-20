@@ -161,6 +161,9 @@
   padding: 20px;
   text-align: center;
 }
+.card {
+  width: 32em;
+}
 
 .cards_fila1 {
   display: flex;
@@ -246,6 +249,11 @@
   padding-top: 18px;
 }
 
+.boton_presentacion {
+  text-decoration: none;
+  color: white;
+}
+
 .container {
   margin: 3em auto;
   display: inline-block;
@@ -283,7 +291,7 @@
 }
 
 .imagen-proyectos {
-  width: auto;
+  width: 32em;
   height: 250px;
   display: block;
   border-radius: 7px;
@@ -309,17 +317,35 @@
   margin-bottom: 7px;
 }
 
-.card-parrafos{
+.card-parrafos {
   padding-top: 3px;
   line-height: 0.5em;
-
 }
 
 /* Estilos específicos para la segunda tarjeta */
 
+.tarjetas_fila1,
+.tarjetas_fila2 {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.botones-proyecto{
+  display: flex;
+  justify-content: space-around;
+}
 
-
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
+@media screen and (min-width: 1058px) and (max-width: 1200px) {
+  .tarjetas_fila1,
+  .tarjetas_fila2 {
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    margin-bottom: 30px;
+  }
   .conoceme {
     display: flex;
     flex-direction: column;
@@ -336,6 +362,16 @@
   /* Estilos para pantallas grandes y desktops */
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  .tarjetas_fila1,
+  .tarjetas_fila2 {
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card{
+    margin-bottom: 10px;
+  }
   .container-imagen-presentacion {
     display: flex;
     justify-content: center;
@@ -374,6 +410,13 @@
 
 /* Tablet portrait: 481–768 pixels */
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  .tarjetas_fila1,
+  .tarjetas_fila2 {
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .conoceme {
     display: flex;
     flex-direction: column;
@@ -405,6 +448,24 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+  .tarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  .tarjetas_fila1,
+  .tarjetas_fila2 {
+    width: 20em !important;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card{
+   width: 20em;
+   margin-bottom: 10px;
+   background-color: cornflowerblue;
+  }
   .barra {
     padding-top: 30px;
     padding-left: 20px;
@@ -430,7 +491,7 @@
     border-top-left-radius: 17px; /* Radio de borde superior izquierdo */
     border-top-right-radius: 17px; /* Radio de borde superior derecho */
     padding: 10px;
-    width: -webkit-fill-available;
+    width: 20em;
     height: 200px;
   }
 
@@ -470,5 +531,6 @@
   .card-parrafos {
     padding-top: 3px;
     line-height: 0.9em;
-  /* Estilos para dispositivos móviles */}
+    /* Estilos para dispositivos móviles */
+  }
 }
