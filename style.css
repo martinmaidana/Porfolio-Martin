@@ -162,30 +162,13 @@
   text-align: center;
 }
 .card {
-  width: 32em;
+  width: 32.5em;
+  border: 5px solid var(--bs-gray-600);
+
+  box-shadow: 5px 5px 5px rgb(111 66 193 / 26%);
+  
 }
 
-.cards_fila1 {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 20px;
-}
-.cards_fila2 {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 20px;
-}
-.card-encabezado {
-  text-align: center; /* Esto centra el texto */
-  max-width: 100%; /* Esto asegura que el texto no sobresalga del ancho de la imagen */
-  padding-bottom: 10px;
-}
-.card-text + p {
-  margin-top: 0.1em; /* Puedes ajustar el valor según tus necesidades */
-}
-.card-encabezado .card-title {
-  margin-top: 10px; /* Espacio superior para separar el título de la imagen */
-}
 
 .card-encabezado .card-text {
   margin-bottom: 10px; /* Espacio inferior para separar el texto de los botones */
