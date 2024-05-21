@@ -163,7 +163,7 @@
 }
 .card {
   width: 32.5em;
-  border: 5px solid var(--bs-gray-600);
+  border: 3px solid var(--bs-gray-600);
 
   box-shadow: 5px 5px 5px rgb(111 66 193 / 26%);
   
